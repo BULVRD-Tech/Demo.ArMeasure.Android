@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_result_label"
+        />
+
+    <TextView
+        android:id="@+id/tv_result_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_result"
+        android:layout_alignLeft="@+id/tv_result"
+        android:layout_alignRight="@+id/tv_result"
+        android:background="#333333"
+        android:paddingBottom="2dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:text="RESULT"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/banner"
+        android:background="#333333"
+        android:paddingBottom="24dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="2dp"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        tools:text="123" />
+
+
+    <LinearLayout
+        android:background="@android:color/background_light"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/ic_arwrld" />
+
+        <TextView
+            android:text="Join the interactive Augmented Reality World on the Ethereum Blockchain!\nBuy, Sell, Rent AR land and interactive 3D experiences."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</RelativeLayout>
