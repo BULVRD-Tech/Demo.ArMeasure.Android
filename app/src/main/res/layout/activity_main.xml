@@ -8,8 +8,7 @@
         android:id="@+id/fl_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tv_result_label"
-        />
+        android:layout_above="@+id/tv_result_label" />
 
     <TextView
         android:id="@+id/tv_result_label"
@@ -47,7 +46,7 @@
         android:layout_alignParentBottom="true"
         android:id="@+id/banner"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="64dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -56,14 +55,29 @@
             android:layout_gravity="center"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:src="@mipmap/ic_arwrld" />
+            android:src="@mipmap/ic_bulvrd" />
 
-        <TextView
-            android:text="Join the interactive Augmented Reality World on the Ethereum Blockchain!\nBuy, Sell, Rent AR land and interactive 3D experiences."
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:gravity="center"
-            android:layout_gravity="center"/>
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="BULVRD : Ethereum meets the road"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Earn cryptocurrency tokens while contributing to the world wide community-based traffic and navigation app. Share real-time traffic, road reports/info, and more. "
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

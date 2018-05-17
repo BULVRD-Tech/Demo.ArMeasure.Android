@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("http://arwrld.com" + "?ref=" + extraVal + "?utm_source=" + extraVal + "?from=" + extraVal));
+                i.setData(Uri.parse("https://bulvrdapp.com" + "?ref=" + extraVal + "?utm_source=" + extraVal + "?from=" + extraVal));
                 startActivity(i);
             }
         });
@@ -245,18 +245,22 @@ public class MainActivity extends AppCompatActivity {
     private boolean isSurfaceResume = false;
 
     private void surfaceOnResume() {
-        if (isSurfaceResume) {
-            return;
-        }
-        if (mSession == null) {
-            return;
-        }
-        if (mSurfaceView != null) {
-            showLoadingMessage();
-            mSession.resume();
-            mSurfaceView.onResume();
-            mDisplayRotationHelper.onResume();
-            isSurfaceResume = true;
+        try {
+            if (isSurfaceResume) {
+                return;
+            }
+            if (mSession == null) {
+                return;
+            }
+            if (mSurfaceView != null) {
+                showLoadingMessage();
+                mSession.resume();
+                mSurfaceView.onResume();
+                mDisplayRotationHelper.onResume();
+                isSurfaceResume = true;
+            }
+        }catch (Exception e){
+
         }
     }
 
